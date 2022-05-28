@@ -1,0 +1,47 @@
+package testScripts;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import pages.homePage;
+import pages.signInPage;
+import pages.signUpPage;
+
+public class signUp_TestSecondVersion {
+		
+		public static void main(String[] args) throws InterruptedException {
+			
+			
+	System.setProperty("webdriver.chrome.driver","C:\\Users\\sneha\\OneDrive\\Desktop\\ProgramingLibraries\\chromedriver_win32 (2)\\chromedriver.exe");	        
+    
+	       
+	WebDriver driver; 
+			
+	driver= new ChromeDriver();
+	
+	homePage hp = new homePage (driver);
+	signInPage sp = new signInPage (driver);
+	signUpPage sup = new signUpPage (driver);
+	
+	driver.get("http://automationpractice.com/index.php");
+	
+	driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+	
+	hp.getSignInLink().click();
+	sp.getEmailAddress().sendKeys("nehashdbisbfusbsr@gmail.com");
+	sp.getcreateButton().click();
+	
+	
+	sup.getSelectGender1().click();
+	sup.getfirstName().sendKeys("Neha");
+	sup.getlastName().sendKeys("Kaber");
+	
+Thread.sleep(4000);			
+driver.quit();
+
+
+	}
+
+}
