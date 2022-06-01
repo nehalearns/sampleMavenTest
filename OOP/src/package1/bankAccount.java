@@ -8,13 +8,15 @@ public class bankAccount {
 		int amountOfmoney; 
 		String ssn; 
 		
+		//static is only part of class
 		static int countClient; 
 		
 		// nothing in this class can be run until you make an object of these functions and a runnable class.
-		 
+		//constructor will execute every time an object is created 
 		
 		
-	   public bankAccount() {
+	  //below are two different constructors and we see example of constructor overloading
+		public bankAccount() {
 				
 				//this.name=name; 
 				System.out.println("An object is created");
@@ -27,12 +29,16 @@ public class bankAccount {
 			System.out.println("An object is created with name");
 			
 		}
-		
+	   
+	   
+	   
+	// static is only part of this class not the object		
 		public static void countClientsNumber() {
 			
-		// static is only part of this class not the object	
-			
+				
 		}
+		
+		
 		// static is only part of this class not the object	
 		
 	   public static void closeAccount() {
@@ -58,7 +64,7 @@ public class bankAccount {
 			
 		}
 		
-		
+	
 		public void depositMoney(int x) {
 			
 			System.out.println("depositing money in ATM");

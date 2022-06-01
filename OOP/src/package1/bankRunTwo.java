@@ -10,7 +10,8 @@ public class bankRunTwo {
 		
 		savingAccount jim = new savingAccount("dflfj");
 		
-		
+	//bankAccount ba = new bankAccount("dfhdk"); this can become a comment and is no longer needed if you make the 
+		//parent class bankAccount abstract
 		
 		jim.savingAmount=6700;
 		
